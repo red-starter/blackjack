@@ -3,7 +3,7 @@
 class window.App extends Backbone.Model
 
   defaults:
-    points:50
+    points:10
     betSize:1
 
   initialize: ->
@@ -11,9 +11,11 @@ class window.App extends Backbone.Model
 
   updatePoints: ->
     if @get('game').get('winner') == 'player' then @set('points',@get('points')+@get('betSize')) else @set('points',@get('points')-@get('betSize'))
-    console.log(@get('points'))
-
+    
+    
     # ????
   makeGame: ->
     @set 'game', game = new Game(@attributes)
+    # set the amount of money to be equal to number of moneys won
     @get('game').on 'change:winner', => @updatePoints()
+    @set 'moneyHeap', moneyHeap = new MoneyCollection( 'numberOfMoneys':@get('points') )

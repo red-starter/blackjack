@@ -5,6 +5,7 @@ class window.AppView extends Backbone.View
     <input type="Number" value=<%= betSize %> class="betting-input">
     <button class="hit-button">Hit</button><button class="stand-button">Stand</button>
     <div class="game-view-container"></div>
+    <div class="money-view-container"></div>
   '
 
 
@@ -42,5 +43,8 @@ class window.AppView extends Backbone.View
       
     @$el.html @template(@model.attributes)
     @$('.game-view-container').html new GameView(model: @model.get 'game').el
+    
+    @$('.money-view-container').html new MoneyCollectionView(collection: @model.get 'moneyHeap').el
+
     
 

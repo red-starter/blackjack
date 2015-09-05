@@ -20,7 +20,7 @@ describe 'game model', ->
       card3= new Card(rank:7,suit:0)
       card4= new Card(rank:7,suit:0)
       dealer = new Hand([card3,card4])
-      debugger
+      
 
       winner = app.findWinner(player,dealer)
 

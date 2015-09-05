@@ -6,6 +6,7 @@ class window.GameView extends Backbone.View
                         <div class="player-hand-container"></div>
                         <div class="dealer-hand-container">
                         <div class="game-view-container"></div>')
+                        
   initialize: ->
     @model.on 'change', => @render()
     @render()
