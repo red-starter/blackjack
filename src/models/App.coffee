@@ -3,7 +3,7 @@
 class window.App extends Backbone.Model
 
   defaults:
-    points:10
+    points:100
     betSize:1
 
   initialize: ->

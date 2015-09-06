@@ -7,6 +7,6 @@ class window.MoneyCollection extends Backbone.Collection
 
   populate: =>
     @reset()
-    @add(new Money(value:1)) for i in [0...@moneys] 
+    if (@moneys > 0) then @add(new Money(value:1)) for i in [0...@moneys] 
 
     

@@ -1,7 +1,7 @@
 class window.AppView extends Backbone.View
   className: 'app'
   template: _.template '
-    <div class="points">You have <%= points %> points</div>
+    <div class="points">You have <%= points %> monies</div>
     <input type="Number" value=<%= betSize %> class="betting-input">
     <button class="hit-button">Hit</button><button class="stand-button">Stand</button>
     <div class="game-view-container"></div>

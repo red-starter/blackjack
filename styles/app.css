@@ -1,3 +1,19 @@
+.coin{
+  position: fixed;
+  height: 30px;
+  width: 30px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+}
+
+input {
+  height: 40px;
+  font-size: 14;
+}
+
 .card {
   float: left;
   border: solid 1px black;
@@ -8,13 +24,11 @@
 }
 
 .points {
+  color: gold;
   position: absolute;
-  left:420px;
-  font-size: 200%;
+  left:600px;
+  font-size: 420%;
   top: 30px;
-  border: solid 1px black;
-  width: 120px;
-  border-radius: 5px;
   height: 100px;
   margin-right: 20px;
 }
